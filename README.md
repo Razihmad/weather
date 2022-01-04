@@ -2,7 +2,7 @@ This project is all about getting the temprature of the city of the user and sen
 To run this project first you have to fork this or clone this project on your local computer and then run the command pip freeze -r requirements.txt to install all the packages,
 that are being used to run this project.
 create a .env file in the same folder where template folder is where you can keep your secret things in the given manner
-SECRET_KEY=<secret key here>
+SECRET_KEY=<secret key here> this is unique for evry project. For this project only i have.
 DEBUG=1
 appid=<your api id here>
 EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
