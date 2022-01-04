@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        .main{
+            width: 500px;
+            height: 500px;
+            text-align: center;
+            position: absolute;
+            top: 200px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+        }
+        input[type='email']{
+            width: 274px;
+            border-radius: 10px;
+            height: 29px;
+        }
+        input[type='text']{
+            width: 274px;
+            border-radius: 10px;
+            height: 29px;
+        }
+        #city{
+            width: 274px;
+            border-radius: 10px;
+            height: 29px;
+        }
+    </style>
+    <body>
+        {% for message in messages %}
+          <script>
+              alert("{{message}}")
+          </script>
+        {% endfor %}
+        <div class="main">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="email">
+                    <input type="email" name="email" required placeholder="Enter Your Email Address" >
+                </div><br>
+                <div class="username">
+                    <input type="text" name="name" id="name" required placeholder="Enter YOur Name">
+                </div><br>
+                <div class="city">
+                    <select name="city" id="city" required>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Kolkata">Kolkata</option>
+                    </select>
+                </div>
+                <br>
+                <input type="submit" name="" id="" class="btn btn-success">
+            </form>
+        </div>
+    </body>
+</html>
