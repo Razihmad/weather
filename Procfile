@@ -1,1 +1,1 @@
-web: gunicorn weather.weather.wsgi
+web: gunicorn weather.wsgi
