@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from app.models import Details
+
+@admin.register(Details)
+class DetailsAdmin(admin.ModelAdmin):
+    list_display=('username','email','city','time')
+    
+    
